@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.pnlBrowsers = new System.Windows.Forms.TableLayoutPanel();
             this.pnlWindow.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +49,7 @@
             this.pnlBrowsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBrowsers.Location = new System.Drawing.Point(0, 0);
             this.pnlBrowsers.Name = "pnlBrowsers";
-            this.pnlBrowsers.RowCount = 3;
-            this.pnlBrowsers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.pnlBrowsers.RowCount = 2;
             this.pnlBrowsers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.pnlBrowsers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.pnlBrowsers.Size = new System.Drawing.Size(915, 547);
@@ -60,7 +60,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 587);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
+            this.LogoImage = ((System.Drawing.Image)(resources.GetObject("$this.LogoImage")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Studio Platform";
