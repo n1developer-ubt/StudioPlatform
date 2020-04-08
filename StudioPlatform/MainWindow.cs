@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using StudioPlatform.Properties;
@@ -95,7 +91,6 @@ namespace StudioPlatform
                     }
                     else
                     {
-                        MessageBox.Show(index + "");
                         b = new CustomBrowser("chrome://version/", "", windowSize, position);
                     }
                     _browsers.Add(b);
@@ -145,6 +140,35 @@ namespace StudioPlatform
             Settings.Default.JsonData = JsonConvert.SerializeObject(sc.AllData);
             Settings.Default.Save();
             MessageBox.Show("Saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                InputDialog d = new InputDialog("Enter Password",new List<Input>(){new Input()
+                {
+                    Index = 0,
+                    Hint = "Password",
+                    IsMandatory = true,
+                    Name = "p",
+                    Type = InputType.Password,
+                }}, this);
+
+                if (d.ShowIt() == ResultType.OK)
+                {
+                    string s = d.Output.Find(x => x.Name.Equals("p")).Value;
+
+                    if (!s.Equals("n1developer"))
+                    {
+                        tabControl1.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    tabControl1.SelectedIndex = 0;
+                }
+            }
         }
     }
 

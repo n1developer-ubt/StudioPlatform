@@ -149,7 +149,7 @@
             this.btnKill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnKill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKill.BorderRadius = 0;
-            this.btnKill.ButtonText = "Kill";
+            this.btnKill.ButtonText = "Close";
             this.btnKill.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKill.DisabledColor = System.Drawing.Color.Gray;
             this.btnKill.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -174,7 +174,7 @@
             this.btnKill.selected = false;
             this.btnKill.Size = new System.Drawing.Size(425, 489);
             this.btnKill.TabIndex = 0;
-            this.btnKill.Text = "Kill";
+            this.btnKill.Text = "Close";
             this.btnKill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKill.Textcolor = System.Drawing.Color.White;
             this.btnKill.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +190,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(915, 547);
             this.tabControl1.TabIndex = 6;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -208,7 +209,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(907, 521);
+            this.tabPage2.Size = new System.Drawing.Size(805, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -220,7 +221,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(901, 515);
+            this.panel4.Size = new System.Drawing.Size(799, 431);
             this.panel4.TabIndex = 0;
             // 
             // panel8
@@ -229,7 +230,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(901, 470);
+            this.panel8.Size = new System.Drawing.Size(799, 386);
             this.panel8.TabIndex = 1;
             // 
             // sc
@@ -240,7 +241,7 @@
             this.sc.Location = new System.Drawing.Point(0, 0);
             this.sc.Name = "sc";
             this.sc.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.sc.Size = new System.Drawing.Size(901, 470);
+            this.sc.Size = new System.Drawing.Size(799, 386);
             this.sc.TabIndex = 0;
             // 
             // panel5
@@ -248,16 +249,16 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 470);
+            this.panel5.Location = new System.Drawing.Point(0, 386);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(901, 45);
+            this.panel5.Size = new System.Drawing.Size(799, 45);
             this.panel5.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btnSave);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(813, 0);
+            this.panel9.Location = new System.Drawing.Point(711, 0);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(5);
             this.panel9.Size = new System.Drawing.Size(86, 43);
