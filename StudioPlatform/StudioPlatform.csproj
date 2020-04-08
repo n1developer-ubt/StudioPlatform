@@ -60,11 +60,16 @@
     <ApplicationIcon>wave.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.4, Version=1.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\n1developer-ubt\ubtlib\UBTStandardLibrary\bin\Debug\Bunifu_UI_v1.5.4.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +88,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserSetting.Designer.cs">
+      <DependentUpon>BrowserSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrowserSettingContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserSettingContainer.Designer.cs">
+      <DependentUpon>BrowserSettingContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomBrowser.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -92,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BrowserSetting.resx">
+      <DependentUpon>BrowserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowserSettingContainer.resx">
+      <DependentUpon>BrowserSettingContainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
